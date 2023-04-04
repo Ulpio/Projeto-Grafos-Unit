@@ -38,5 +38,7 @@ caminho = dfs_caminho(grafo, 0, 689)  # traça o caminho entre os vértices 1 e 
 
 if caminho:
     print('Caminho:', caminho)
+    print('\n')
+    print(len(caminho))
 else:
     print('Não há caminho entre os vértices especificados.')
