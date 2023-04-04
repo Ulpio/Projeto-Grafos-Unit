@@ -40,4 +40,3 @@ if caminho:
     print('Caminho:', caminho)
 else:
     print('Não há caminho entre os vértices especificados.')
-    print('Tente outros vértices.')
