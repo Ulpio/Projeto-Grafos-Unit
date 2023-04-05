@@ -1,6 +1,5 @@
 import networkx as nx
 
-# Função para ler o arquivo e converter em um grafo
 def ler_arquivo_grafo(arquivo):
     with open(arquivo, 'r') as f:
         arestas = f.readlines()
@@ -8,7 +7,6 @@ def ler_arquivo_grafo(arquivo):
     grafo = nx.Graph(arestas)
     return grafo
 
-# Função que traça um caminho usando DFS
 def dfs_caminho(grafo, inicio, fim):
     visitados = set()
     caminho = []
@@ -32,9 +30,8 @@ def dfs_caminho(grafo, inicio, fim):
     dfs(inicio)
     return caminho if caminho[-1] == fim else None
 
-# Exemplo de uso
-grafo = ler_arquivo_grafo('Arestas.txt')  # lê o arquivo e cria o grafo
-caminho = dfs_caminho(grafo, 0, 689)  # traça o caminho entre os vértices 1 e 6 usando DFS
+grafo = ler_arquivo_grafo('Arestas.txt')
+caminho = dfs_caminho(grafo, 0, 699)
 
 if caminho:
     print('Caminho:', caminho)
